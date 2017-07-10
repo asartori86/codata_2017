@@ -36,7 +36,7 @@ and commits it.
 
 This is meant to be a simple collaborative project between `AStudent` and `BStudent`.
 
-`AStudent` creates a directory in its home and cd in it:
+`AStudent` creates a directory in its home and `cd` in it:
 
 ```
 $ cd ~
@@ -44,12 +44,12 @@ $ mkdir my_first_collabiorative_project
 $ cd my_first_collabiorative_project
 ```
 
-`AStudent' gets the above file
+`AStudent` gets the above file
 
 	wget https://raw.githubusercontent.com/asartori86/codata_2017/master/very_interesting_text.txt
 
 
-Now `AStudent` starts version controlling this repository using git:
+Now `AStudent` initilize a git repository in the current directory
 
 ```
 $ git init
@@ -78,7 +78,7 @@ Now `AStudent` tells git he wants to track `very_interesting_text.txt`:
 $ git add very_interesting_text.txt
 ```
 
-Check the status again to make sure git understood correctly:
+Check the status again
 
 ```
 $ git status
@@ -93,7 +93,7 @@ Changes to be committed:
 
 ```
 
-Now git is suggesting us that the file is ready to be committed, and we agree with git in this case:
+And he commits it
 
 ```
 $ git commit -m "first commit"
@@ -254,7 +254,7 @@ To https://github.com/asartori86/my_first_collaborative_project.git
  * [new branch]      conclusions -> conclusions
 ```
 
-If we take a look at the `Network`, under `Graphs` sheat, on github page we see the status of the for branches `master`, `a_modification`, `b_modification` and `conclusions`.
+If we take a look at the `Network`, under `Graphs` sheat, on github page we see the status of the four branches `master`, `a_modification`, `b_modification` and `conclusions`.
 
 ![some text](./figures/before_merge.png)
 
@@ -305,15 +305,26 @@ Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
   (use "git pull" to update your local branch)
 ```
 
-Git is warning `AStudent` that his local branch is not up to date. To do so, `AStudent` needs to `pull` from the remote:
+Git is warning `AStudent` that his local branch is not up to date. To do so, `AStudent` needs to `merge` from the remote:
 
 ```
-$ git pull origin master
+$ git merge origin master
 Updating edda7a7..b74ff8f
 Fast-forward
  very_interesting_text.txt | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
+
+Note we did two steps
+
+	$ git fetch
+	$ git merge origin master
+
+git allows us to do the two steps with one `pull` command
+
+	$ git pull origin master
+
+`pull = fetch + merge`
 
 `AStudent` can merge the work of `BStudent`. A default message will appear, committing the merging operation into a new commit:
 
@@ -397,6 +408,3 @@ $ git merge origin/conclusions
 
 ![some text](./figures/rebased_merged.png)
 
-
-
-my_first_collaborative_project
