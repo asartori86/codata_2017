@@ -134,7 +134,7 @@ It is time for `BStudent` to join the game. To do so, `AStudent` has to give him
 `BStudent` has to accept the invitation to collaborate, then he clones his own local version of the repository:
 
 ```
-$ git clone https://github.com/asartori86/my_first_collaborative_project.git
+$ git clone https://github.com/AStudent/my_first_collaborative_project.git
 $ cd my_first_collaborative_project/
 ```
 
