@@ -308,7 +308,7 @@ Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
 Git is warning `AStudent` that his local branch is not up to date. To do so, `AStudent` needs to `merge` from the remote:
 
 ```
-$ git merge origin master
+$ git merge origin/master
 Updating edda7a7..b74ff8f
 Fast-forward
  very_interesting_text.txt | 2 +-
@@ -318,7 +318,7 @@ Fast-forward
 Note we did two steps
 
 	$ git fetch
-	$ git merge origin master
+	$ git merge origin/master
 
 git allows us to do the two steps with one `pull` command
 
